@@ -1,0 +1,55 @@
+Consider the following Python procedure. Specify its order of growth.
+
+1.
+def modten(n):
+    return n%10
+    
+    
+O(1)
+
+2.
+
+def multlist(m, n):
+    '''
+    m is the multiplication factor
+    n is a list.
+    '''
+    result = []
+    for i in range(len(n)):
+        result.append(m*n[i])
+    return result   
+    
+O(len(n))
+
+3.
+
+def foo(n):
+    if n <= 1:
+        return 1
+    return foo(n/2) + 1
+    
+ O(log(n))
+ 
+ 
+ 4.
+ def recur(n):
+    if n <= 0:
+        return 1
+    else:
+        return n*recur(n-1)
+        
+ O(n)
+ 
+ 5.
+ 
+ def baz(n):
+    for i in range(n):
+        for j in range(n):
+            print( i,j )
+        
+        
+  O(n^2)
+
+
+
+
